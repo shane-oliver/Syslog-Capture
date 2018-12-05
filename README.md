@@ -5,7 +5,7 @@ This Collector requires the following set up:
   - For production or staging ensure you harden the mysql database (NO hardening is done in the below)
 
 ---------------------------------------------------------------------------------------------------------------------------------
-sudo apt update 
+```sudo apt update 
 sudo apt install mysql-server 
 
 Once Mysql is installed:
@@ -64,15 +64,10 @@ Once Mysql is installed:
           `sd_username` varchar(64) NULL,
           PRIMARY KEY (`index`),
           UNIQUE INDEX `index_UNIQUE` (`index` ASC));
-
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
+```
 mysql> show tables;
 +--------------------+
 | Tables_in_log_data |
@@ -135,6 +130,6 @@ mysql> show columns from raw_data;
 | sd-username                   | varchar(64)      | YES  |     | NULL    |       |
 +-------------------------------+------------------+------+-----+---------+-------+
 48 rows in set (0.00 sec)
-
+```
 ---------------------------------------------------------------------------------------------------------------------------------
 
