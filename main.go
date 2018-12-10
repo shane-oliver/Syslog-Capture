@@ -261,6 +261,7 @@ func main() {
     // The database is called log_data; ; User is logcatcher; password is Jun1perlogs; host is 10.30.0.225
     db, err := sql.Open("mysql", fmt.Sprintf("%s:%s@tcp(%s:%s)/%s",db_user, db_password, db_address, db_port, db_database))
     CheckError(err, fmt.Sprintf("Connection made to database %s with user %s", db_address, db_user))
+    db.SetMaxIdleConns(0)
 
     // defer the close till after the main function has finished
     // executing
